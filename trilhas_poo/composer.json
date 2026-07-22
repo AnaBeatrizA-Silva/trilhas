@@ -2,7 +2,7 @@
     "name": "ana/trilhas_poo",
     "autoload": {
         "psr-4": {
-            "Ana\\TrilhasPoo\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
