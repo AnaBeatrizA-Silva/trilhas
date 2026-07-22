@@ -4,7 +4,7 @@ namespace App\Models;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use App\Models\Pagamento;
+use App\Interfaces\Pagamento;
 
 class Boleto implements Pagamento {
     public function pagar(float $valor): void

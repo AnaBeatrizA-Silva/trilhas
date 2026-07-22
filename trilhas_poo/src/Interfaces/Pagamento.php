@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Interfaces;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
