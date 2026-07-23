@@ -1,0 +1,1 @@
+create type status_emprestimo as enum ('ativo', 'devolvido', 'atrasado');

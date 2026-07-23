@@ -77,7 +77,7 @@ class ComposerStaticInit645796bb26c131e8fb0dbbf76b217216
         ),
         'A' =>
         array (
-            'Ana\\TrilhasPoo\\' => 15,
+            'App\\' => 4,
         ),
     );
 
@@ -226,7 +226,7 @@ class ComposerStaticInit645796bb26c131e8fb0dbbf76b217216
         array (
             0 => __DIR__ . '/..' . '/clue/ndjson-react/src',
         ),
-        'Ana\\TrilhasPoo\\' =>
+        'App\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

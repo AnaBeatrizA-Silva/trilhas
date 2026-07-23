@@ -1,0 +1,1 @@
+create type disponibilidade_livro as enum ('disponivel', 'indisponivel');
