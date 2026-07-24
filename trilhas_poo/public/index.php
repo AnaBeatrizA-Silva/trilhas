@@ -1,11 +1,18 @@
 <?php
 
     require_once __DIR__ . '/../vendor/autoload.php';
-    
-    $router = new \App\Core\Router();
-    require_once __DIR__ . '/../routes.php';
 
-    $router->dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
+// Limpeza da URL
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $path = str_replace('/trilhas_poo/public', '', $path);
+    if ($path === '' || $path === '/') $path = '/home';
+
+    define('ROOT', dirname(__DIR__)); // Isso aponta para /var/www
+require_once ROOT . '/vendor/autoload.php';
+require_once ROOT . '/Routes.php';
+
+// Chama o arquivo de rotas
+require_once __DIR__ . '/../Routes.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class Usuario {
+use App\Interface\Identificavel;
+
+class Usuario implements Identificavel {
     private int $idUser;
     private string $nome;
     private int $idade;
@@ -12,6 +14,10 @@ class Usuario {
         $this->idUser = $idUser;
         $this->nome = $nome;
         $this->idade = $idade;
+    }
+
+    public function getId(): int {
+        return $this->idUser;
     }
 
     public function setIdUser(int $idUser): void

@@ -4,10 +4,19 @@ namespace App\Service;
 
 use App\Repositories\LivroRepository;
 use App\Models\Livro;
+use App\Traits\Logger;
 use InvalidArgumentException;
 use DateTime;
+use Exception;
 
+/*
+    Adicionar mais verificações para validar duplicidade de isbn, autor, editora, data de lançamento, classificação indicativa, etc.. são campos obrigatórios
+    e validar a idade da pessoa em relação a classificação indicativa.
+*/
 class LivroService {
+
+    use Logger;
+
     private LivroRepository $repository;
 
     public function __construct(LivroRepository $repository){
@@ -29,8 +38,10 @@ class LivroService {
     }
 
     public function cadastrar(Livro $livro): bool {
-        $this->validar($livro);
-
-        return $this->repository->criar($livro);
+            $this->validar($livro);
+            $resultado = $this->repository->criar($livro);
+            // $this->log("Livro: '{$livro->getTitulo()}' cadastrado com sucesso.");
+    
+            return $resultado;
     }
 }

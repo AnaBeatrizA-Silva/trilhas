@@ -3,11 +3,11 @@
 
 namespace App\Models;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
 use DateTime;
 use App\Enum\DisponibilidadeLivro;
+use App\Interfaces\Identificavel;
 
-class Livro {
+class Livro implements Identificavel {
     private int $idLivro; 
     private string $titulo; 
     private string $autor; 
