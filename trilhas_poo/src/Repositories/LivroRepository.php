@@ -43,4 +43,8 @@ class LivroRepository extends  BaseRepository{
             'disponibilidade' => $livro->getDisponibilidade()->value,
         ]);
     }
+
+    public function buscarTodos(): array {
+        
+    }
 }

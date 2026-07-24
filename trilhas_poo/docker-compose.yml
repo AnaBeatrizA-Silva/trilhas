@@ -2,7 +2,7 @@ services:
   php:
     build:
       context: .
-      dockerfile: dock  er/php/Dockerfile
+      dockerfile: docker/php/Dockerfile
     container_name: trilha-poo-php
     working_dir: /var/www
     volumes:

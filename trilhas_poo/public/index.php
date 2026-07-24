@@ -1,6 +1,11 @@
 <?php
 
     require_once __DIR__ . '/../vendor/autoload.php';
+    
+    $router = new \App\Core\Router();
+    require_once __DIR__ . '/../routes.php';
+
+    $router->dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

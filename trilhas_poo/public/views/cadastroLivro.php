@@ -6,7 +6,7 @@
     <title>Cadastro Livro</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="/salvar-livro" method="post">
         <label for="titulo">Titulo</label>
         <input type="text" name="titulo" id="titulo">
         <br>
